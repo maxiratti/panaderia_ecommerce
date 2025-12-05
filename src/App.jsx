@@ -10,6 +10,7 @@ import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
 import { MainLayout} from "./layouts/MainLayout";
 import { AdminLayout} from "./layouts/AdminLayout";
+import { Header } from "./components/Header/Header";
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <>
       <BrowserRouter>
         <CartProvider>
-          <Header />
+          
           {/* Dejamos fuera del Routes lo que queremos que no se vuelva a renderizar al navegar */}
           <Routes>
             <Route element={<MainLayout />}>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useAuthContext} from "../../context/AuthContext/useAuthContext"
+import {useAuthContext} from "../../context/AuthContext/useAuthContext";
 import { Navigate, useNavigate } from "react-router-dom";
 
 
@@ -9,7 +9,7 @@ export const Login = () => {
     const navigate = useNavigate();
 
     if (user){
-        return <Navigate to = "/admin/alta_productos" replace />
+        return <Navigate to = "/admin/alta-productos" replace />;
     }
 
     const handleChange = (e) => {
@@ -19,19 +19,19 @@ export const Login = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         const sucess = login(userForm.name, userForm.password);
         if (sucess){
             navigate("/admin/alta-productos");
         } else{
             alert("Credenciales incorrectas");
-            setUserForm({ name: "", passwword: ""});
+            setUserForm({ name: "", password: ""});
         }        
     };
 
     return (
-        <form onSubmit={handleChange}>
+        <form onSubmit={handleSubmit}>
             <h2>Iniciar Sesión</h2>
             <div>
                 <label htmlFor="name" >Usuario:</label>
