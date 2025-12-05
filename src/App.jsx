@@ -24,11 +24,11 @@ function App() {
             <Route element={<MainLayout />}>
               <Route
                 path="/"
-                element={<ItemListContainer titulo={"Bienvenidos"} />}
+                element={<ItemListContainer titulo={"Bienvenidos a Pizzería Victoria"} />}
               />
               <Route
                 path="/category/:category"
-                element={<ItemListContainer titulo={"Bienvenidos"} />}
+                element={<ItemListContainer titulo={"Bienvenidos a Pizzería Victoria"} />}
               />
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
               <Route path="/carrito" element={<Cart />} />
